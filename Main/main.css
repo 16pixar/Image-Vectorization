@@ -1,0 +1,327 @@
+body {
+  margin: 0;
+  padding: 2rem 1.5rem;
+  font: 1rem/1.5 "PT Sans", Arial, sans-serif;
+  color: #5a5a5a;
+  outline: none;
+  overflow-x: hidden;
+}
+
+.output {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+}
+
+pre {
+  font: 1rem/1.5 "PT Sans", Arial, sans-serif;  
+}
+
+names.autores {
+  position: absolute;
+  left: 150px;
+  
+}
+.deco {
+  position: absolute;
+  width: 280px;
+  z-index: -1;
+  right: 0;
+  top: 0;
+}
+rotulo.inp {
+  position: absolute;
+  bottom: 25%;
+  right: 43%;
+
+  font-size: larger;
+}
+rotulo.out {
+  position: absolute;
+  bottom: 25%;
+  right: 22%;
+
+  font-size: larger;
+  
+}
+.encabezado h1 {
+  font-size: 50px;
+  color: black;
+  margin-bottom: 20px;
+}
+.eti {
+  position: absolute;
+  left: 24%;
+  bottom: -20;
+}
+.preCarga p {
+  position: absolute;
+  left: 25%;
+  bottom: -200;
+}
+span {
+  color: #7f00ff;
+}
+
+#imageSrc{
+  position: absolute;
+  left: 50%;
+  top: 25%;
+}
+#btnGen {
+  position: absolute;
+  top: 48%;
+  left: 2%;
+
+  color: white;
+  background: black;
+  border-radius: 8px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+
+  cursor: pointer;
+  
+  font-weight: 500;
+  font-size: 19pt;
+}
+
+#my-canvas {
+  position: absolute;
+  left: 69%;
+  bottom: 30%
+}
+
+
+#fileInput {
+  color: transparent;
+}
+#fileInput::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+#imageSrc{
+  position: absolute; 
+  left: 52%;
+  top: 50%;
+}
+
+#fileInput::before {
+  position: absolute;
+  top: 40%;
+  left: 2%;
+
+  content: 'Cargar Imagen';
+  color: white;
+  background: black;
+
+  border-radius: 8px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+
+  cursor: pointer;
+  
+  font-weight: 500;
+  font-size: 20pt;
+}
+
+.reloj {
+  position: absolute;
+  right: 14%;
+  top: 34%; /*34*/
+
+  font-family: sans-serif;
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 30px;
+  border-color: black;
+}
+
+.tiempos {
+  position: relative;
+  right: -110%;
+  top: 40;
+  
+  overflow: auto;
+
+  height: 300px;
+  width: 200px;
+  padding: 30px 0;
+}
+
+
+.tiempos::-webkit-scrollbar {
+  display: none;
+}
+
+.cadaTiempo {
+  display: inline-block;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid;
+  border-radius:50px ;
+  margin-bottom: 10px;
+}
+
+.registroTiempo {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.titulo {
+  position: relative;
+  top: 40%;
+  left: 87%;
+}
+
+
+.limpiaHistorial {
+  display: block;
+  position: fixed;
+  z-index: 1000;
+  transform: translate(-50%);
+  cursor: pointer;
+  bottom: 20px;
+  
+  
+  
+  left: 98%;
+
+  width: 50px;
+  height: 50px;
+  padding: 10px 0;
+  border-radius: 50px;
+  background-color: rgb(246, 229, 255);
+  border: 1px solid #7f00ff;
+}
+
+.minutos {
+  font-size: 36px;
+  font-weight: bold;
+  top: 40%;
+}
+.segundos {
+  font-size: 36px;
+  font-weight: bold;
+}
+.milisegundos {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+
+.button {
+  cursor: pointer;
+}
+
+
+.displayVacio {
+  visibility: hidden;
+}
+
+/* Parte de los inputs */
+
+.cajaInput {
+  position: relative;
+  width: 250px;
+  bottom: -150;
+  left: 15%;
+  margin-bottom: 20px;
+}
+
+.cajaInput input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid ;
+  border-color: black;
+  border-radius: 5px;
+  outline: none;
+  color: black;
+  font-size: 1em;
+  transition: 0.5s;
+}
+
+.cajaInput span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: black;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.cajaInput input:valid ~ span ,
+.cajaInput input:focus ~ span { 
+  color: #7f00ff;
+  background-color: white;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+
+  border-left: 2px solid #7f00ff;
+  border-right: 2px solid #7f00ff;
+  letter-spacing: 0.2em;
+}
+
+.cajaInput input:valid  ,
+.cajaInput input:focus  { 
+  border: solid #7f00ff;
+}
+
+/*------------------Estadistica---------------------------------*/
+
+.content {
+  position: absolute;
+  width: 40%;
+  margin: 0 auto;
+  top: 100%;
+}
+
+/* ------------------------Animacion cohete -------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+.preCarga {
+  position: absolute;
+  width: 100%;
+
+  top: 100%;
+  left: 28%;
+  z-index: 9999;
+}
+
+.miEspacio {
+  width:  800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.contenedorCo {
+  position: absolute;
+  bottom: -500;
+  left: 49%;
+  transform: translate(-50%, 50%);
+  z-index: 1000;
+}
+
+.miCohete {
+  height: 400px;
+  animation: move 1s linear infinite alternate;
+}
+
+@keyframes move{
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50px);
+  }
+}
+

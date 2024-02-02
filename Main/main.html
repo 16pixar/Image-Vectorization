@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no">
+        
+        <title>Dibujar</title>
+        
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" /> </head>
+    
+    <style>
+        #my-canvas { border: 1px solid gray; } 
+    </style>
+
+    <body>
+        <h1 class="titulo displayVacio"> Generaciones </h1>
+
+        <div class="reloj displayVacio">
+            
+            <span class = "minutos"> 00 :</span>
+            <span class = "segundos">&nbsp;00 .</span>
+            <span class = "milisegundos">00</span>
+
+            <ul class="tiempos">
+                
+                <button class = "limpiaHistorial displayVacio">
+                    <span class="material-symbols-outlined">
+                        restart_alt
+                    </span>  
+                </button>
+                
+            </ul>
+            
+        </div>
+
+        <div class = encabezado> 
+            
+            <h1>Dibuja con <span> Algoritmos Genéticos </span>  </h1>
+            <p>Segundo Proyecto del curso de Análisis de Algoritmos del Tecnológico de Costa Rica <br> Realizado por: </p>
+            <names class="autores">       
+                <li> <b>Aarón Piñar Mora </b> </li> 
+                <li> <b> Alvaro Moreira Villalobos </b> </li>
+            </names> 
+            <img class="deco" src="images/esquina.svg" alt="">
+        </div> 
+               
+
+        <div class="inputoutput">
+            <img id="imageSrc">
+            <div class="caption"> <input type="file" id="fileInput" name="file" onclick="cargar()"/> </div>
+            
+        </div>
+
+        <div class="output">
+            <canvas id="canvasOutput"></canvas>
+            <div class="caption"></div>
+        </div>
+
+        <canvas class = "can displayVacio" id="my-canvas" width="300" height="300"></canvas>
+
+        
+
+        <rotulo class="inp displayVacio">Imagen Cargada</rotulo>
+        <rotulo class="out displayVacio">Dibujo</rotulo>
+        
+
+        <button  class = "dibuje displayVacio" id="btnGen" onclick = validacion()>Dibujar Imagen</button>
+        
+        <div class = "zonaInput displayVacio">
+            <div class = "cajaInput ">
+                <input type = "text" required = "required">
+                <span>Cantidad Generaciones</span>
+            </div>
+
+            <div class = "cajaInput ">
+                <input type = "text" required = "required">
+                <span>cantidad de Individuos</span>
+            </div>
+
+            <div class = "cajaInput ">
+                <input type = "text" required = "required">
+                <span>cantidad de Puntos</span>
+            </div>
+
+            <div class = "cajaInput ">
+                <input type = "text" required = "required">
+                <span>Porcentaje Mutacion</span>
+            </div>
+        </div>
+        
+        <section class="content">
+            <h1></h1>
+            <canvas id="mychart" height="300" width="300"></canvas>
+        </section>
+
+        <div class = "preCarga displayVacio">
+            <h1 class="eti">Para que Sirven los Algoritmos Genéticos?</h1>
+            <p> Son técnicas de optimización y se inspiran en la evolución biológica.<br> <br>
+                Se utilizan para encontrar soluciones aproximadas a problemas complejos y de optimización,<br> 
+                buscando iterativamente combinaciones de variables que maximicen o minimicen una función objetivo.</p>
+            <div class = contenedorCo>
+                <img class = miCohete src="images/cohete.svg"alt="cohete">    
+            </div>
+            <img class = miEspacio src="images/otroEspacio.svg"  alt="espac">
+        </div>
+        
+
+        <div class="container">
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+        </div>
+          
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script async src="https://docs.opencv.org/3.4.0/opencv.js" type="text/javascript"></script>
+        <script src="main.js" ></script>
+    </body>
+
+</html>
